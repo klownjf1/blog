@@ -1,0 +1,42 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+
+
+    //не разрешает использовать переменные без указания типа
+    "noImplicitAny": true,
+    "module": "es6",
+    "target": "es5",
+    "jsx": "react",
+    "allowJs": true,
+    "moduleResolution": "node",
+
+    // для абсолютного импорта
+    "baseUrl": ".",
+
+    //esModuleInterop позволяет работать с пкетами, которые используют common js как с
+    //обычными пакетами с помощью import (require() module.export) = common js
+
+    //import Moment from 'moment'
+
+    // без флага esModuleInterop результат undefined
+    //console.log(Moment)
+
+    //с флагом результат [object Object]
+    //console.log(Moment)
+    "esModuleInterop": true,
+
+    // Если какая то библиотека не имеет default import,
+    // лоадеры вроде ts-loader или babel-loader автоматически создают их
+    // вместо такого импорта
+    // import * as React from 'react'
+    // можно писать такой
+    // import React from 'react'
+    "allowSyntheticDefaultImports": true
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
+  }
+}
