@@ -5,12 +5,11 @@
 
     //не разрешает использовать переменные без указания типа
     "noImplicitAny": true,
-    "module": "es6",
+    "module": "esnext",
     "target": "es5",
-    "jsx": "react",
+    "jsx": "react-jsx",
     "allowJs": true,
     "moduleResolution": "node",
-
     // для абсолютного импорта
     "baseUrl": ".",
 
@@ -36,7 +35,8 @@
   },
   "ts-node": {
     "compilerOptions": {
-      "module": "CommonJS"
+      "module": "CommonJS",
+
     }
   }
 }
