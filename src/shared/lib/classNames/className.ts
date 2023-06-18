@@ -1,20 +1,18 @@
+// Record обозначает что в качестве ключа будет string а в качестве значения boolean либо string
+type Mods = Record<string, boolean | string>
 
-type Mods = Record<string, boolean | string> // Record обозначает что в качестве ключа будет string а в качестве значения boolean либо string
-
-
-
-
-export function classNames(cls:string, mods?: Mods, additional?:string[]):string {
+export function classNames(cls: string, mods?: Mods, additional?: string[]): string {
     return [
         cls,
         ...additional.filter(Boolean),
         Object.entries(mods)
             .filter(([className, value]) => Boolean(value))
-            .map(([className]) => className )
-    ].join(' ')
+            .map(([_, className]) => className),
+    ].join(' ');
 }
-    
-/*
-classNames('remove-btn', {hovered: true, selectable: true, red: false}, ['pdg']) // remove-btn hovered selectable pdg
-*/
 
+/*
+// remove-btn hovered selectable pdg
+classNames('remove-btn', {hovered: true, selectable: true, red: false}, ['pdg'])
+
+*/
