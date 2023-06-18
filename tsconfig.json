@@ -5,16 +5,18 @@
 
     //не разрешает использовать переменные без указания типа
     "noImplicitAny": true,
-    "module": "esnext",
+    "module": "ESNext",
     "target": "es5",
     "jsx": "react-jsx",
     "allowJs": true,
     "moduleResolution": "node",
+
     // для абсолютного импорта
     "baseUrl": ".",
     "paths": {
       "*": ["./src/*"]
     },
+
     //esModuleInterop позволяет работать с пкетами, которые используют common js как с
     //обычными пакетами с помощью import (require() module.export) = common js
 
