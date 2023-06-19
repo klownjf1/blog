@@ -3,9 +3,11 @@ module.exports = {
         browser: true,
         es2021: true,
     },
+
     extends: [
         'plugin:react/recommended',
         'airbnb',
+        'plugin:i18next/recommended',
     ],
     parser: '@typescript-eslint/parser',
     parserOptions: {
@@ -18,6 +20,7 @@ module.exports = {
     plugins: [
         'react',
         '@typescript-eslint',
+        'i18next',
     ],
     rules: {
         // 0 is disabled, 1 is warned, 2 is allowed
@@ -37,7 +40,7 @@ module.exports = {
         'import/extensions': [0],
         'import/no-extraneous-dependencies': [1],
         'no-underscore-dangle': [0],
-
+        'i18next/no-literal-string': ['error', {markupOnly: true}],
     },
     globals: {
         __IS_DEV__: true,

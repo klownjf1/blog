@@ -82,9 +82,9 @@ export function buildLoaders({isDev}: BuildOptions): webpack.RuleSetRule[] {
     };
 
     return [
-        babelLoader,
         fileLoader,
         svgLoader,
+        babelLoader,
         typescriptLoader,
         cssLoader,
     ];
