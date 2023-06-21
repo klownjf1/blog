@@ -9,11 +9,10 @@ import {useTranslation} from 'react-i18next';
 
 function App() {
     const {theme} = useTheme();
-    const {t} = useTranslation('about');
 
     return (
         <div className={classNames('app', {}, [theme])}>
-            <Suspense fallback={<div>{t('Загрузка...')}</div>}>
+            <Suspense fallback="">
                 <NavBar />
                 <div className="content-page">
                     <SideBar />
