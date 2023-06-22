@@ -3,5 +3,9 @@
   "Перевод": "Translation",
   "Язык": "English",
   "Загрузка...": "Loading...",
-  "Переключить": "toggle"
+  "Переключить": "toggle",
+  "Страница не найдена": "Page not found",
+  "Произошла непредвиденная ошибка": "Something went wrong",
+  "Обновить страницу": "Update page",
+  "throw error": "throw error"
 }

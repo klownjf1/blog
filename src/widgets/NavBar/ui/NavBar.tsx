@@ -1,7 +1,6 @@
 import React, {FC} from 'react';
 import {classNames} from 'shared/lib/classNames/className';
 import {AppLink, AppLinkTheme} from 'shared/ui/AppLinks/AppLink';
-import {ThemeSwitcher} from 'shared/ui/ThemeSwitcher';
 import s from './NavBar.module.scss';
 
 interface NavBarProps {
@@ -9,7 +8,6 @@ interface NavBarProps {
 }
 
 export const NavBar:FC<NavBarProps> = ({className}) => {
-    console.log(className);
     return (
         <div className={classNames(s.NavBar, {}, [className])}>
 

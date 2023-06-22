@@ -16,9 +16,8 @@ export const SideBar: FC<SideBarProps> = ({className}) => {
     const onToggle = () => {
         setCollapsed((prev) => !prev)
     }
-    console.log(classNames(s.SideBar, {[s.collapsed]: collapsed}, [className]))
     return (
-        <div className={classNames(s.SideBar, {[s.collapsed]: collapsed}, [className])}>
+        <div className={classNames(s.SideBar, {[s.collapsed]: !collapsed}, [className])}>
 
             <button onClick={onToggle} type="button">
                 {t('Переключить')}

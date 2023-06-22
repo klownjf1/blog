@@ -43,6 +43,8 @@ module.exports = {
         'no-underscore-dangle': [0],
         'i18next/no-literal-string': ['error', {markupOnly: true}],
         semi: [0],
+        'arrow-body-style': [0],
+        'react/self-closing-comp': [0],
     },
     globals: {
         __IS_DEV__: true,
