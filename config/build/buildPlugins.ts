@@ -23,7 +23,7 @@ export function buildPlugins({paths, isDev}: BuildOptions): webpack.WebpackPlugi
         }),
 
     ]
-    if (!isDev) {
+    if (isDev) {
         plugins.push(new BundleAnalyzerPlugin({openAnalyzer: false}))
         plugins.push(new webpack.HotModuleReplacementPlugin())
     }
