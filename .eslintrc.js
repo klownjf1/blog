@@ -4,12 +4,7 @@ module.exports = {
         es2021: true,
         jest: true,
     },
-
-    extends: [
-        'plugin:react/recommended',
-        'airbnb',
-        'plugin:i18next/recommended',
-    ],
+    extends: ['plugin:react/recommended', 'airbnb', 'plugin:i18next/recommended', 'plugin:storybook/recommended', 'plugin:storybook/recommended'],
     parser: '@typescript-eslint/parser',
     parserOptions: {
         ecmaFeatures: {
@@ -18,18 +13,16 @@ module.exports = {
         ecmaVersion: 'latest',
         sourceType: 'module',
     },
-    plugins: [
-        'react',
-        '@typescript-eslint',
-        'i18next',
-    ],
+    plugins: ['react', '@typescript-eslint', 'i18next'],
     rules: {
-        // 0 is disabled, 1 is warned, 2 is allowed
+    // 0 is disabled, 1 is warned, 2 is allowed
         indent: [2, 4],
         'react/jsx-indent': [2, 4],
         'react/jsx-indent-props': [2, 4],
         'object-curly-spacing': [0],
-        'react/jsx-filename-extension': [2, {extensions: ['.js', '.jsx', '.ts', '.tsx']}],
+        'react/jsx-filename-extension': [2, {
+            extensions: ['.js', '.jsx', '.ts', '.tsx'],
+        }],
         'import/no-unresolved': [0],
         'import/prefer-default-export': [0],
         'react/require-default-props': [0],
@@ -41,12 +34,26 @@ module.exports = {
         'import/extensions': [0],
         'import/no-extraneous-dependencies': [1],
         'no-underscore-dangle': [0],
-        'i18next/no-literal-string': ['error', {markupOnly: true}],
+        'i18next/no-literal-string': ['error', {
+            markupOnly: true,
+            ignoreAttribute: ['data-testid', 'to'],
+        }],
         semi: [0],
         'arrow-body-style': [0],
         'react/self-closing-comp': [0],
+        'storybook/hierarchy-separator': 'error',
+        'storybook/default-exports': 'off',
+
     },
     globals: {
         __IS_DEV__: true,
+        JSX: true,
     },
+    overrides: [{
+        files: ['**/src/**/*.test.{ts,tsx}'],
+        rules: {
+            'i18next/no-literal-string': [0],
+        },
+    }],
+
 };

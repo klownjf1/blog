@@ -1,8 +1,11 @@
-import React from 'react';
+import React, {FC} from 'react';
 import {useTranslation} from 'react-i18next';
-import {BugButton} from 'app/providers/ErrorBoundary';
 
-function MainPage() {
+interface MainPageProps {
+    className?: string
+}
+
+const MainPage:FC<MainPageProps> = ({className}) => {
     const {t} = useTranslation('main');
 
     return (
