@@ -43,6 +43,7 @@ module.exports = {
         'react/self-closing-comp': [0],
         'storybook/hierarchy-separator': 'error',
         'storybook/default-exports': 'off',
+        'eslint linebreak-style': ['error', 'windows'],
 
     },
     globals: {
