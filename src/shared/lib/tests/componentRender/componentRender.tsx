@@ -19,7 +19,6 @@ export const componentRender = (component: ReactNode, options: componentRenderPr
             <I18nextProvider i18n={i18nForTests}>
                 {component}
             </I18nextProvider>
-            ,
         </MemoryRouter>,
     )
 }
