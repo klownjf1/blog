@@ -44,6 +44,7 @@ module.exports = {
         'storybook/hierarchy-separator': 'error',
         'storybook/default-exports': 'off',
         'linebreak-style': [0],
+        'padded-blocks': [0],
 
     },
     globals: {
