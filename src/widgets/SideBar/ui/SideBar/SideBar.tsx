@@ -1,5 +1,5 @@
 import React, {FC, useState} from 'react';
-import {classNames} from 'shared/lib/classNames/className';
+import {classNames} from 'shared/lib/classNames/classNames';
 import {ThemeSwitcher} from 'shared/ui/ThemeSwitcher';
 import {LangSwitcher} from 'shared/ui/LangSwitcher/LangSwitcher';
 import {useTranslation} from 'react-i18next';

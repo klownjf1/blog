@@ -1,9 +1,10 @@
 import { ButtonHTMLAttributes, FC } from 'react';
-import { classNames } from 'shared/lib/classNames/className';
+import { classNames } from 'shared/lib/classNames/classNames';
 import s from './Button.module.scss';
 
 export enum ButtonTheme {
     CLEAR = 'clear',
+    CLEAR_INVERTED = 'clearInverted',
     OUTLINE= 'outline',
     BACKGROUND = 'background',
     BACKGROUND_INVERTED = 'backgroundInverted'
