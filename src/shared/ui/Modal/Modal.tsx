@@ -20,7 +20,7 @@ export const Modal:FC<ModalProps> = ({
 
     const [isClosing, setIsClosing] = useState<boolean>(false)
     const timerRef = useRef<ReturnType<typeof setTimeout>>()
-    const {theme} = useTheme()
+    const { theme } = useTheme();
 
     const closeHandler = useCallback(() => {
         if (onClose) {
@@ -39,7 +39,6 @@ export const Modal:FC<ModalProps> = ({
     const mods: Record<string, boolean> = {
         [s.opened]: isOpen,
         [s.isClosing]: isClosing,
-        [s[theme]]: true,
     }
 
     const onKeyDown = useCallback((e: KeyboardEvent) => {
@@ -63,7 +62,7 @@ export const Modal:FC<ModalProps> = ({
 
     return (
         <Portal>
-            <div className={classNames(s.Modal, mods, [className])}>
+            <div className={classNames(s.Modal, mods, [className, theme])}>
                 <div className={s.overlay} onClick={closeHandler}>
                     <div className={s.content} onClick={onContentClick}>
                         {children}

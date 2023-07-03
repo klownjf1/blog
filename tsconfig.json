@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "outDir": "./dist/",
+    "esModuleInterop": true,
 
 
     //не разрешает использовать переменные без указания типа
@@ -27,7 +28,7 @@
 
     //с флагом результат [object Object]
     //console.log(Moment)
-    "esModuleInterop": true,
+
 
     // Если какая то библиотека не имеет default import,
     // лоадеры вроде ts-loader или babel-loader автоматически создают их
@@ -47,8 +48,8 @@
   // Если этого свойства нет, то автоматические включаются все файла,
   // в нашем случае надо прописать
   "include": [
-    "./config/jest/setupTest.ts",
-    "./src/**/*.tsx",
-    "./src/**/*.ts"
+    "./config/jest/setupTests.ts",
+    "./src/**/*.ts",
+    "./src/**/*.tsx"
   ]
-} 
+}
