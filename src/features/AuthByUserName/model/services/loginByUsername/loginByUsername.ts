@@ -9,6 +9,11 @@ interface LoginByUsernameProps {
     password: string
 }
 
+enum LoginErrors {
+    INCORRECT_DATA = '',
+    SERVER_ERROR = '',
+}
+
 export const loginByUsername = createAsyncThunk<User, LoginByUsernameProps, {rejectValue: string}>(
     'login/fetchByIdStatus',
     async (authData, thunkAPI) => {
@@ -26,7 +31,7 @@ export const loginByUsername = createAsyncThunk<User, LoginByUsernameProps, {rej
 
         } catch (err) {
             console.log(err)
-            return thunkAPI.rejectWithValue(i18n.t('Вы ввели неверный логин или пароль'))
+            return thunkAPI.rejectWithValue('error')
         }
 
     },
