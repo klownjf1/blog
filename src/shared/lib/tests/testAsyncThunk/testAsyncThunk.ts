@@ -29,7 +29,11 @@ export class TestAsyncThunk<Return, Arg, RejectedValue> {
     // eslint-disable-next-line class-methods-use-this
     async callThunk(arg: Arg) {
         const action = this.actionCreator(arg)
-        const result = await action(this.dispatch, this.getState, {api: this.api, navigate: this.navigate})
+        const result = await action(
+            this.dispatch,
+            this.getState,
+            {api: this.api, navigate: this.navigate},
+        )
 
         return result
     }
