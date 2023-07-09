@@ -6,7 +6,7 @@ import {SideBarItemType} from '../../model/item';
 import s from './SideBarItem.module.scss'
 
 interface SideBarItemProps {
-    item?: SideBarItemType
+    item: SideBarItemType
     collapsed?: boolean
 }
 
@@ -17,7 +17,7 @@ export const SideBarItem = memo(({item, collapsed}: SideBarItemProps) => {
     return (
         <AppLink
             theme={AppLinkTheme.PRIMARY}
-            to={item.path}
+            to={item?.path}
             className={classNames(s.item, {[s.collapsed]: !collapsed}, [])}
         >
             <item.Icon className={s.icon} />

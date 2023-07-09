@@ -51,10 +51,12 @@ module.exports = {
         'react-hooks/exhaustive-deps': 'error', // Checks effect dependencies
         'no-param-reassign': 'off',
         'lines-between-class-members': 'off',
+        'no-undef': 'off',
     },
     globals: {
         __IS_DEV__: true,
         JSX: true,
+        __API__: true,
     },
     overrides: [{
         files: ['**/src/**/*.{test,stories}.{ts,tsx}'],
